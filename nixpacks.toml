@@ -1,0 +1,9 @@
+# nixpacks.toml
+
+[phases.install]
+# Commands to install dependencies
+cmds = ["pip install -r requirements.txt", "pip install gunicorn"]
+
+[phases.start]
+# The command to start the application
+startCmd = "gunicorn --bind 0.0.0.0:8000 app:app"
