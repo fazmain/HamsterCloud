@@ -1,0 +1,9 @@
+# HamsterCloud API Dependencies
+# Core Flask framework for the web application
+Flask==3.0.0
+
+# Flask-CORS for handling Cross-Origin Resource Sharing
+Flask-CORS==4.0.0
+
+# Gunicorn WSGI server for production deployment
+gunicorn==21.2.0
