@@ -2,7 +2,7 @@
 
 [phases.install]
 # Commands to install dependencies.
-cmds = ["pip install -r requirements.txt", "pip install gunicorn"]
+cmds = ["pip install -r requirements.txt"]
 
 [phases.start]
 # The command to start the application.
