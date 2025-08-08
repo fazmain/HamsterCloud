@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 import random
+import os
 
 app = Flask(__name__)
 CORS(app)  # so Next.js can talk to us
@@ -31,4 +32,5 @@ def echo():
     return jsonify({"you_said": data, "note": "Hamsters heard you loud and clear!"})
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    port = int(os.getenv("PORT", "8000"))
+    app.run(host="0.0.0.0", port=port)
